@@ -1,0 +1,8 @@
+<h1> Dogs </h1>
+
+<% @dogs.sort_by { |dog| dog.employee_count}.reverse.each do |dog| %>
+
+<%=  link_to dog.name, dog_path(dog)%><br>
+<%=  dog.breed %><br>
+<%=  dog.age %><br>
+<% end %>
